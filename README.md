@@ -1,4 +1,5 @@
 # optimization
-some algorithms for optimization
 
-This project will generate some optimization algorithms for optimization
+This project will provide some optimization algorithms for optimization.
+It is just for practice, so the accuracy is not guaranteed.
+
