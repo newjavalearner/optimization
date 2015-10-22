@@ -23,4 +23,4 @@ lb = 0
 
 val, maxima = golden(obj, lb, ub, 0.003)
 
-print "The value and minimal is "+str(val)+", "+str(maxima)
+print "The value and maximal is "+str(val)+", "+str(maxima)
