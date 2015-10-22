@@ -1,0 +1,26 @@
+import numpy as np
+
+seg = (np.sqrt(5)-1)/2
+
+
+def golden(f, lower, upper, merror):
+    error = 1000
+    while error >= merror:
+        temp1 = upper-seg*(upper-lower)
+        temp2 = lower+seg*(upper-lower)
+        print temp1, temp2
+        if f(temp1)-f(temp2)>0:
+            upper = temp2
+        else:
+            lower = temp1
+        error = np.abs(f(temp1)-f(temp2))
+    return (temp2+temp1)/2, f((temp2+temp1)/2)
+
+# an example
+obj = lambda x: np.power(x,4)-5*np.power(x,3)-2*np.power(x,2)+24*x
+ub = 3
+lb = 0
+
+val, maxima = golden(obj, lb, ub, 0.003)
+
+print "The value and minimal is "+str(val)+", "+str(maxima)
